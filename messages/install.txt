@@ -8,3 +8,5 @@ Before this plugin will activate, you *must*
 follow the installation instructions here:
 
 https://github.com/thomasmeeus/SublimeLinter-contrib-yamllint
+
+Also make sure to install `yamllint` with `Python3`

@@ -11,15 +11,15 @@ SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 
 ### Linter installation
 Before using this plugin, you must ensure that `yamllint` is installed on your system. To install `yamllint`, do the following:
 
-1. Install [Python](http://python.org/download/) and [pip](http://www.pip-installer.org/en/latest/installing.html).
+1. Install Python3 and pip. Python3 is required by `yamllint`
 
 1. Install `yamllint` by typing the following in a terminal:
    ```
-   [sudo] pip install yamllint
+   [sudo] pip3 install yamllint
    ```
 
 
-**Note:** This plugin requires `yamllint` __version__ or later.
+**Note:** This plugin requires `yamllint` 1.9 or later.
 
 ### Linter configuration
 In order for `yamllint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
