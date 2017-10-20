@@ -3,7 +3,7 @@ SublimeLinter-contrib-yamllint
 
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-yamllint.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-yamllint)
 
-This linter plugin for [SublimeLinter][docs] provides an interface to [yamllint](__linter_homepage__). It will be used with files that have the “__syntax__” syntax.
+This linter plugin for [SublimeLinter][docs] provides an interface to [yamllint](https://github.com/thomasmeeus/SublimeLinter-contrib-yamllint). It will be used with files that have the "yaml" syntax.
 
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
@@ -11,7 +11,7 @@ SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 
 ### Linter installation
 Before using this plugin, you must ensure that `yamllint` is installed on your system. To install `yamllint`, do the following:
 
-1. Install Python3 and pip. Python3 is required by `yamllint`
+1. Install [Python3](https://www.python.org/downloads/) and pip. Python3 is required by `yamllint`
 
 1. Install `yamllint` by typing the following in a terminal:
    ```
