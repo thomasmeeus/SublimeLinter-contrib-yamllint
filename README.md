@@ -36,14 +36,16 @@ To install via Package Control, do the following:
 1. When the plugin list appears, type `yamllint`. Among the entries you should see `SublimeLinter-contrib-yamllint`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
-For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
+Check the [Yamllint docs](https://yamllint.readthedocs.io/en/latest/) for more information about all settings. I suggest to create the file `~/.config/yamllint/config` to override specific settings.
 
-In addition to the standard SublimeLinter settings, SublimeLinter-contrib-yamllint provides its own settings. Those marked as “Inline Setting” or “Inline Override” may also be [used inline][inline-settings].
+```
+extends: default
 
-|Setting|Description|Inline Setting|Inline Override|
-|:------|:----------|:------------:|:-------------:|
-|foo|Something.|&#10003;| |
-|bar|Something else.| |&#10003;|
+rules:
+  line-length:
+    max: 600
+```
+
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
