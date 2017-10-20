@@ -1,0 +1,10 @@
+SublimeLinter-contrib-yamllint
+-------------------------------
+This linter plugin for SublimeLinter provides an interface to yamllint.
+
+** IMPORTANT! **
+
+Before this plugin will activate, you *must*
+follow the installation instructions here:
+
+https://github.com/thomasmeeus/SublimeLinter-contrib-yamllint
