@@ -3,7 +3,7 @@ SublimeLinter-contrib-yamllint
 
 [![Build Status](https://travis-ci.org/thomasmeeus/SublimeLinter-contrib-yamllint.svg?branch=master)](https://travis-ci.org/thomasmeeus/SublimeLinter-contrib-yamllint)
 
-This linter plugin for [SublimeLinter][docs] provides an interface to [yamllint](https://github.com/thomasmeeus/SublimeLinter-contrib-yamllint). It will be used with files that have the "yaml" syntax.
+This linter plugin for [SublimeLinter][docs] provides an interface to [yamllint](https://yamllint.readthedocs.io/). It will be used with files that have the "yaml" syntax.
 
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
