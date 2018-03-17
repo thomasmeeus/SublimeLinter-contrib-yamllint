@@ -25,7 +25,7 @@ class Yamllint(PythonLinter):
     regex = (
         r'^.+?:(?P<line>\d+):(?P<col>\d+): \[((?P<warning>warning)|(?P<error>error))\] (?P<message>.+)'
     )
-    tempfile_suffix = '-'
+    tempfile_suffix = 'yaml'
     error_stream = util.STREAM_STDOUT
     word_re = r'^(".*?"|[-\w]+)'
     module = 'yamllint'
