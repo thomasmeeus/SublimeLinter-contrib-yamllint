@@ -16,8 +16,10 @@ from SublimeLinter.lint import PythonLinter, util
 class Yamllint(PythonLinter):
     """Provides an interface to yamllint."""
 
-    syntax = ('yml', 'yaml')
-    cmd = ('yamllint@python3', '-f', 'parsable', '*')
+    defaults = {
+        'selector': 'source.yaml'
+    }
+    cmd = ('yamllint', '-f', 'parsable', '*')
     executable = None
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
