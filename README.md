@@ -21,10 +21,33 @@ Before using this plugin, you must ensure that `yamllint` is installed on your s
 
 **Note:** This plugin requires `yamllint` 1.9 or later.
 
-### Linter configuration
+### Linter configuration - basic
 In order for `yamllint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
 Once you have installed and configured `yamllint`, you can proceed to install the SublimeLinter-contrib-yamllint plugin if it is not yet installed.
+
+### Linter configuration - overriding
+
+
+Notice that by default yamllint tries to load .yamllint file from the working directory, if exists. That's why sometimes it is better to load specific
+config based on the project.
+
+Overriding plugin defaults can be done by setting .sublime-project `settings` section, for example below will use `.yamllint` file from the root of the project path:
+
+```json
+    "settings":
+    {
+        "SublimeLinter.linters.yamllint.c": 
+        [
+            "${project_path}/.yamllint"
+        ]
+    }
+
+```
+
+Of course you can also hard-code here some path if you really need to.
+
+For more see [SublimeLinter docs](https://sublimelinter.readthedocs.io/en/stable/settings.html#settings-expansion).
 
 ### Plugin installation
 Please use [Package Control][pc] to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
@@ -46,6 +69,7 @@ rules:
     max: 600
 ```
 
+Also if you use per-project override then it is strongly encouraged to set `.yamllint` file in the root of the project path.
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
