@@ -5,6 +5,9 @@ SublimeLinter-contrib-yamllint
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [yamllint](https://yamllint.readthedocs.io/). It will be used with files that have the "yaml" syntax.
 
+![SublimeLinter-contrib-yamllint detecting a duplicate key](screenshot.png?raw=true "SublimeLinter-contrib-yamllint detecting a duplicate key")
+
+
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
 
@@ -29,15 +32,14 @@ Once you have installed and configured `yamllint`, you can proceed to install th
 ### Linter configuration - overriding
 
 
-Notice that by default yamllint tries to load .yamllint file from the working directory, if exists. That's why sometimes it is better to load specific
-config based on the project.
+Notice that by default yamllint tries to load .yamllint file from the working directory, if exists. That's why sometimes it is better to load specific config based on the project.
 
 Overriding plugin defaults can be done by setting .sublime-project `settings` section, for example below will use `.yamllint` file from the root of the project path:
 
 ```json
     "settings":
     {
-        "SublimeLinter.linters.yamllint.c": 
+        "SublimeLinter.linters.yamllint.c":
         [
             "${project_path}/.yamllint"
         ]
@@ -47,7 +49,7 @@ Overriding plugin defaults can be done by setting .sublime-project `settings` se
 
 Of course you can also hard-code here some path if you really need to.
 
-For more see [SublimeLinter docs](https://sublimelinter.readthedocs.io/en/stable/settings.html#settings-expansion).
+For more info see [SublimeLinter docs](https://sublimelinter.readthedocs.io/en/stable/settings.html#settings-expansion).
 
 ### Plugin installation
 Please use [Package Control][pc] to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
