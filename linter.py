@@ -10,17 +10,21 @@
 
 """This module exports the Yamllint plugin class."""
 
-from SublimeLinter.lint import PythonLinter, util
+from SublimeLinter.lint import Linter, util
 
 
-class Yamllint(PythonLinter):
+class Yamllint(Linter):
     """Provides an interface to yamllint."""
 
     defaults = {
-        'selector': 'source.yaml'
+        'selector': 'source.yaml',
+        'args': '-f parsable',
+        '-c': '',  # CONFIG_FILE
+        '-d': '',  # CONFIG_DATA, but this is deprecated option
     }
-    cmd = ('yamllint', '-f', 'parsable', '*')
-    executable = None
+    inline_overrides = ['c', 'd']
+
+    cmd = ('yamllint', '${args}', '${file}')
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
     version_requirement = '>= 1.9'
