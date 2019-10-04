@@ -18,12 +18,11 @@ class Yamllint(Linter):
 
     defaults = {
         'selector': 'source.yaml',
-        'args': '-f parsable',
         '-c': '',  # CONFIG_FILE
         '-d': '',  # CONFIG_DATA, but this is deprecated option
     }
 
-    cmd = ('yamllint', '${args}', '${file}')
+    cmd = ('yamllint', '--format', 'parsable', '${args}', '${file}')
     regex = (
         r'^.+?:(?P<line>\d+):(?P<col>\d+): \[((?P<warning>warning)|(?P<error>error))\] (?P<message>.+)'
     )
