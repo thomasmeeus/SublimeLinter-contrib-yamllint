@@ -22,9 +22,9 @@ class Yamllint(Linter):
         '-d': '',  # CONFIG_DATA, but this is deprecated option
     }
 
-    cmd = ('yamllint', '--format', 'parsable', '${args}', '${file}')
+    cmd = ('yamllint', '--format', 'parsable', '${args}', '${temp_file}')
     regex = (
-        r'^.+?:(?P<line>\d+):(?P<col>\d+): \[((?P<warning>warning)|(?P<error>error))\] (?P<message>.+)'
+        r'^.+?:(?P<line>\d+):(?P<col>\d+): \[(?P<error_type>[^\]]+)\] (?P<message>.+)'
     )
     tempfile_suffix = 'yaml'
     error_stream = util.STREAM_STDOUT
