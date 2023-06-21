@@ -49,6 +49,39 @@ Overriding plugin defaults can be done by setting .sublime-project `settings` se
 
 Of course you can also hard-code here some path if you really need to.
 
+#### Direct parameters without `.yamllint`
+
+To avoid of creation of a .yamllint file, you can use the `d` option to add raw YAML text (consider using \n and proper spacing for YAML to be appropriate):
+
+Per project:
+
+```json
+    "settings":
+    {
+        "SublimeLinter.linters.yamllint.d":
+            "extends: default\nrules: { line-length: { max: 120 } }"
+    }
+
+```
+
+Or in global SublimeLinter config file:
+
+```json
+// SublimeLinter Settings - User
+{
+    ...
+
+    "linters": {
+
+        ...
+
+        "yamllint": {
+            "d": "extends: default\nrules: { line-length: { max: 120 } }",
+        },
+    }
+}
+```
+
 For more info see [SublimeLinter docs](https://sublimelinter.readthedocs.io/en/stable/settings.html#settings-expansion).
 
 ### Plugin installation
